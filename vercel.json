@@ -6,8 +6,8 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.sparkgridenergy.com.au" }],
-      "destination": "https://sparkgridenergy.com.au/:path*",
+      "has": [{ "type": "host", "value": "sparkgridenergy.com.au" }],
+      "destination": "https://www.sparkgridenergy.com.au/:path*",
       "permanent": true
     }
   ]
