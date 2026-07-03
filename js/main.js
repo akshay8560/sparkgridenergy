@@ -22,6 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
         msg.textContent = 'Please agree to the consent terms to continue.';
         return;
       }
+
+      const tsField = form.querySelector('#consentTimestamp');
+      if (tsField) tsField.value = new Date().toISOString();
+
+      const params = new URLSearchParams(window.location.search);
+      const srcField = form.querySelector('#leadSource');
+      if (srcField && params.get('utm_source')) {
+        srcField.value = params.get('utm_source');
+      }
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
         msg.className = 'form-message error';
         msg.textContent = 'Please enter a valid email address.';

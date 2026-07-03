@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact SparkGrid Energy for a free quote or eligibility check on air conditioning, heat pump, solar and battery upgrades in Victoria.">
-  <title>Contact Us — SparkGrid Energy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="description" content="Check your eligibility for VEU air conditioning, heat pump hot water, solar and battery upgrades in Victoria. Submit an enquiry to SparkGrid Energy.">
+  <title>Check Eligibility — SparkGrid Energy</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="images/logo.png" type="image/png">
@@ -14,25 +12,19 @@
 <body>
   <header class="header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="SparkGrid Energy">
-        <div class="logo-text"><span class="brand">SparkGrid Energy</span><span class="tagline">Smarter Energy Upgrades for Victorian Homes</span></div>
-      </a>
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="SparkGrid Energy"><div class="logo-text"><span class="brand">SparkGrid Energy</span><span class="tagline">Smarter Energy Upgrades for Victorian Homes</span></div></a>
       <nav class="nav">
         <a href="index.html">Home</a>
-        <div class="dropdown"><a href="#">Services ▾</a>
-          <div class="dropdown-menu">
-            <a href="air-conditioning.html">Air Conditioning</a>
-            <a href="veu-air-conditioning.html">VEU Aircon Upgrades</a>
-            <a href="heat-pump-hot-water.html">Heat Pump Hot Water</a>
-            <a href="solar-panels.html">Solar Panels</a>
-            <a href="solar-batteries.html">Solar Batteries</a>
-            <a href="solar-maintenance.html">Solar Maintenance</a>
-          </div>
-        </div>
+        <div class="dropdown"><a href="#">Services ▾</a><div class="dropdown-menu">
+          <a href="air-conditioning.html">Air Conditioning</a><a href="veu-air-conditioning.html">VEU Aircon Upgrades</a>
+          <a href="heat-pump-hot-water.html">Heat Pump Hot Water</a><a href="solar-panels.html">Solar Panels</a>
+          <a href="solar-batteries.html">Solar Batteries</a><a href="solar-maintenance.html">Solar Maintenance</a>
+        </div></div>
+        <a href="rebates-eligibility.html">Rebates</a>
         <a href="how-it-works.html">How It Works</a>
+        <a href="faqs.html">FAQs</a>
         <a href="about.html">About</a>
-        <a href="contact.html" class="nav-cta active">Get a Quote</a>
+        <a href="contact.html" class="nav-cta active">Check Eligibility</a>
       </nav>
       <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
@@ -40,31 +32,38 @@
 
   <section class="page-hero">
     <div class="container">
-      <h1>Get in Touch</h1>
-      <p>Submit an enquiry and our team will help you check eligibility, compare options and coordinate your energy upgrade.</p>
+      <h1>Check Eligibility &amp; Submit Enquiry</h1>
+      <p>Tell us about your property and upgrade interest. We'll review your enquiry and contact you to discuss next steps.</p>
     </div>
   </section>
 
   <section class="contact-section">
     <div class="container">
       <form class="contact-form" id="contact-form">
+        <input type="hidden" name="leadSource" id="leadSource" value="organic">
+        <input type="hidden" name="consentTimestamp" id="consentTimestamp" value="">
+
         <div class="form-group">
           <label for="fullName">Full Name *</label>
-          <input type="text" id="fullName" name="fullName" required placeholder="Your full name">
+          <input type="text" id="fullName" name="fullName" required>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label for="phone">Phone Number *</label>
+            <label for="phone">Phone *</label>
             <input type="tel" id="phone" name="phone" required placeholder="04XX XXX XXX">
           </div>
           <div class="form-group">
             <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required placeholder="you@email.com">
+            <input type="email" id="email" name="email" required>
           </div>
         </div>
         <div class="form-group">
-          <label for="address">Property Address / Postcode *</label>
-          <input type="text" id="address" name="address" required placeholder="Street address and postcode">
+          <label for="address">Property Address *</label>
+          <input type="text" id="address" name="address" required>
+        </div>
+        <div class="form-group">
+          <label for="postcode">Postcode *</label>
+          <input type="text" id="postcode" name="postcode" required maxlength="4" pattern="[0-9]{4}">
         </div>
         <div class="form-row">
           <div class="form-group">
@@ -76,11 +75,11 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="ownership">Own or Rent *</label>
+            <label for="ownership">Owner or Renter *</label>
             <select id="ownership" name="ownership" required>
               <option value="">Select...</option>
-              <option>Own</option>
-              <option>Rent</option>
+              <option>Owner</option>
+              <option>Renter</option>
             </select>
           </div>
         </div>
@@ -97,8 +96,8 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="currentSystem">Current Heating System</label>
-          <select id="currentSystem" name="currentSystem">
+          <label for="currentHeating">Current Heating System</label>
+          <select id="currentHeating" name="currentHeating">
             <option value="">Select...</option>
             <option>Gas room heater</option>
             <option>Ducted gas heating</option>
@@ -109,7 +108,28 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="photos">Upload Photos (optional)</label>
+          <label for="currentHotWater">Current Hot Water System</label>
+          <select id="currentHotWater" name="currentHotWater">
+            <option value="">Select...</option>
+            <option>Gas storage</option>
+            <option>Electric storage</option>
+            <option>Instant gas</option>
+            <option>Heat pump</option>
+            <option>Not sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="solarStatus">Solar Status</label>
+          <select id="solarStatus" name="solarStatus">
+            <option value="">Select...</option>
+            <option>No solar</option>
+            <option>Existing solar</option>
+            <option>Want solar + battery</option>
+            <option>Battery only</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="photos">Upload Photos (heater, switchboard, roof, hot water unit, etc.)</label>
           <input type="file" id="photos" name="photos" accept="image/*" multiple>
         </div>
         <div class="form-group">
@@ -121,6 +141,10 @@
             <option>Evening (5pm – 8pm)</option>
           </select>
         </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us more about your property or upgrade goals..."></textarea>
+        </div>
         <div class="form-check">
           <input type="checkbox" id="consent" name="consent" required>
           <label for="consent">By submitting this form, you agree that SparkGrid Energy may contact you by phone, SMS or email about your energy upgrade enquiry. You can opt out at any time.</label>
@@ -131,12 +155,7 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-disclaimer">SparkGrid Energy provides sales, coordination and customer support for energy upgrade services. Final eligibility, product approval, installation requirements, rebates, discounts and certificate creation are subject to assessment by the relevant accredited provider, installer and program rules.</div>
-      <div class="footer-bottom"><p>&copy; 2026 SparkGrid Energy. All rights reserved.</p></div>
-    </div>
-  </footer>
+  <footer class="footer"><div class="container"><div class="footer-disclaimer">SparkGrid Energy provides sales, coordination and customer support for energy upgrade services. Final eligibility, product approval, installation requirements, discounts, rebates and certificate creation are subject to assessment by the relevant accredited provider, registered agent, installer and program rules.</div><div class="footer-bottom"><p>&copy; 2026 SparkGrid Energy.</p></div></div></footer>
   <script src="js/main.js"></script>
 </body>
 </html>

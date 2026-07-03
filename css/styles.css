@@ -134,6 +134,7 @@ ul { list-style: none; }
 
 /* Service cards */
 .cards-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.cards-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .service-card {
   background: var(--white); border-radius: var(--radius); padding: 32px;
   box-shadow: var(--shadow); border: 1px solid var(--gray-100);
@@ -268,9 +269,33 @@ ul { list-style: none; }
   border-left: 4px solid var(--green); line-height: 1.7; font-style: italic;
 }
 
+/* Trust section */
+.trust-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px; }
+.trust-item {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 16px; background: var(--white); border-radius: 8px;
+  border: 1px solid var(--gray-100); font-size: 0.9rem; color: var(--gray-700);
+}
+.trust-item span { color: var(--green); font-weight: 700; flex-shrink: 0; }
+
+/* FAQ */
+.faq-list { max-width: 800px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--gray-200); padding: 20px 0; }
+.faq-item h3 { font-size: 1rem; color: var(--navy); margin-bottom: 8px; font-weight: 600; cursor: pointer; }
+.faq-item p { color: var(--gray-500); font-size: 0.92rem; line-height: 1.65; }
+
+/* Journey */
+.journey-steps {
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+  margin: 32px 0; font-size: 0.82rem; color: var(--gray-500);
+}
+.journey-steps span { background: var(--green-light); color: var(--green-dark); padding: 6px 12px; border-radius: 20px; }
+.journey-steps .arrow { background: none; color: var(--gray-500); padding: 6px 4px; }
+
 /* Responsive */
 @media (max-width: 900px) {
-  .cards-grid { grid-template-columns: 1fr; }
+  .cards-grid, .cards-grid-3 { grid-template-columns: 1fr; }
+  .trust-grid { grid-template-columns: 1fr; }
   .features-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
 }
