@@ -3,170 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact Spark Grid Energy for a free energy assessment. Get expert advice on LED lighting, solar, and hot water upgrades.">
-  <title>Contact Us - Spark Grid Energy</title>
+  <meta name="description" content="Contact SparkGrid Energy for a free quote or eligibility check on air conditioning, heat pump, solar and battery upgrades in Victoria.">
+  <title>Contact Us — SparkGrid Energy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo">
-        <img src="images/logo.svg" alt="Spark Grid Energy" class="logo-icon">
-        <div class="logo-text">
-          <span class="brand">SPARK GRID ENERGY</span>
-          <span class="tagline">Powering Australia's Future</span>
-        </div>
+        <img src="images/logo.png" alt="SparkGrid Energy">
+        <div class="logo-text"><span class="brand">SparkGrid Energy</span><span class="tagline">Smarter Energy Upgrades for Victorian Homes</span></div>
       </a>
       <nav class="nav">
         <a href="index.html">Home</a>
-        <div class="dropdown">
-          <a href="index.html#services">Services ▾</a>
+        <div class="dropdown"><a href="#">Services ▾</a>
           <div class="dropdown-menu">
-            <a href="led-lighting.html">LED Lighting</a>
-            <a href="hot-water.html">Hot Water Heaters</a>
-            <a href="solar.html">Solar Installation</a>
+            <a href="air-conditioning.html">Air Conditioning</a>
+            <a href="veu-air-conditioning.html">VEU Aircon Upgrades</a>
+            <a href="heat-pump-hot-water.html">Heat Pump Hot Water</a>
+            <a href="solar-panels.html">Solar Panels</a>
+            <a href="solar-batteries.html">Solar Batteries</a>
+            <a href="solar-maintenance.html">Solar Maintenance</a>
           </div>
         </div>
-        <a href="about.html">About Us</a>
-        <a href="partner-program.html">Partner Program</a>
-        <a href="rebate-programs.html">Energy Rebate Programs</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html" class="active">Contact Us</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="nav-cta active">Get a Quote</a>
       </nav>
-      <button class="mobile-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <section class="page-hero">
     <div class="container">
-      <h1>Contact Us</h1>
-      <p>Seize the opportunity offered by government rebate programs today. Let us know which state you're in, and we'll gladly assist you in navigating available subsidies.</p>
-    </div>
-  </section>
-
-  <section class="page-content" style="padding-bottom: 0;">
-    <div class="container">
-      <h2 style="text-align: center;">Contact us now to take the first step towards a more sustainable future.</h2>
-      <div class="rebate-cards" style="margin: 40px 0;">
-        <a href="rebate-programs.html#veu" class="rebate-card"><h4>VEU - Victoria</h4><p>Learn More</p></a>
-        <a href="rebate-programs.html#ess" class="rebate-card"><h4>ESS - New South Wales</h4><p>Learn More</p></a>
-        <a href="rebate-programs.html#erf" class="rebate-card"><h4>ERF – QLD, TAS, WA</h4><p>Learn More</p></a>
-        <a href="rebate-programs.html#qbest" class="rebate-card"><h4>QBEST - Queensland</h4><p>Learn More</p></a>
-      </div>
+      <h1>Get in Touch</h1>
+      <p>Submit an enquiry and our team will help you check eligibility, compare options and coordinate your energy upgrade.</p>
     </div>
   </section>
 
   <section class="contact-section">
     <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3>Get In Touch</h3>
-          <p style="color: var(--gray-600); margin-bottom: 24px;">Use the form to drop us an email and let us know how we can help. Old-fashioned phone calls work too!</p>
-          <h3>What You Get By Contacting Us</h3>
-          <ul class="contact-benefits">
-            <li>Quick response to your inquiry</li>
-            <li>The expertise of an experienced energy expert</li>
-            <li>Answers to all your questions</li>
-            <li>Book a free assessment at your convenience</li>
-          </ul>
-          <div style="margin-top: 32px;">
-            <p><strong>Phone:</strong> <a href="tel:+61400000000" style="color: var(--green-primary);">+61 400 000 000</a></p>
-            <p><strong>Email:</strong> <a href="mailto:info@sparkgridenergy.com.au" style="color: var(--green-primary);">info@sparkgridenergy.com.au</a></p>
+      <form class="contact-form" id="contact-form">
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="fullName" required placeholder="Your full name">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="04XX XXX XXX">
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="you@email.com">
           </div>
         </div>
-        <form class="contact-form" id="contact-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="firstName">First Name</label>
-              <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
-            </div>
+        <div class="form-group">
+          <label for="address">Property Address / Postcode *</label>
+          <input type="text" id="address" name="address" required placeholder="Street address and postcode">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="propertyType">Residential or Business *</label>
+            <select id="propertyType" name="propertyType" required>
+              <option value="">Select...</option>
+              <option>Residential</option>
+              <option>Business</option>
+            </select>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Enter your Email" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone no</label>
-              <input type="tel" id="phone" name="phone" placeholder="Enter your mobile no" required>
-            </div>
+          <div class="form-group">
+            <label for="ownership">Own or Rent *</label>
+            <select id="ownership" name="ownership" required>
+              <option value="">Select...</option>
+              <option>Own</option>
+              <option>Rent</option>
+            </select>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="postcode">Post Code</label>
-              <input type="text" id="postcode" name="postcode" placeholder="Enter your code" required>
-            </div>
-            <div class="form-group">
-              <label for="state">State</label>
-              <select id="state" name="state" required>
-                <option value="">Select one...</option>
-                <option>New South Wales</option>
-                <option>Victoria</option>
-                <option>Queensland</option>
-                <option>Western Australia</option>
-                <option>South Australia</option>
-                <option>Tasmania</option>
-                <option>Australian Capital Territory</option>
-                <option>Northern Territory</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="product">Select Product</label>
-              <select id="product" name="product" required>
-                <option value="">Select one...</option>
-                <option>LED Lighting</option>
-                <option>Water Heaters</option>
-                <option>Solar</option>
-                <option>Heating/Cooling</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="premise">Type of Premise</label>
-              <select id="premise" name="premise" required>
-                <option value="">Select one...</option>
-                <option>Commercial</option>
-                <option>Residential</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="callDate">Best Time To Call</label>
-              <input type="date" id="callDate" name="callDate">
-            </div>
-            <div class="form-group">
-              <label for="callTime">Time</label>
-              <select id="callTime" name="callTime">
-                <option value="">Time</option>
-                <option>10:30 - 11:00</option>
-                <option>11:00 - 01:00</option>
-                <option>3:00 to 5:00</option>
-              </select>
-            </div>
-          </div>
-          <button type="submit" class="btn-primary form-submit">Submit</button>
-          <div class="form-message"></div>
-        </form>
-      </div>
+        </div>
+        <div class="form-group">
+          <label for="service">Interested Service *</label>
+          <select id="service" name="service" required>
+            <option value="">Select...</option>
+            <option>Air conditioning</option>
+            <option>VEU aircon upgrade</option>
+            <option>Heat pump hot water</option>
+            <option>Solar panels</option>
+            <option>Solar battery</option>
+            <option>Solar maintenance</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="currentSystem">Current Heating System</label>
+          <select id="currentSystem" name="currentSystem">
+            <option value="">Select...</option>
+            <option>Gas room heater</option>
+            <option>Ducted gas heating</option>
+            <option>Electric heater</option>
+            <option>Old split system</option>
+            <option>No existing system</option>
+            <option>Not sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="photos">Upload Photos (optional)</label>
+          <input type="file" id="photos" name="photos" accept="image/*" multiple>
+        </div>
+        <div class="form-group">
+          <label for="contactTime">Preferred Contact Time</label>
+          <select id="contactTime" name="contactTime">
+            <option value="">Select...</option>
+            <option>Morning (8am – 12pm)</option>
+            <option>Afternoon (12pm – 5pm)</option>
+            <option>Evening (5pm – 8pm)</option>
+          </select>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="consent" name="consent" required>
+          <label for="consent">By submitting this form, you agree that SparkGrid Energy may contact you by phone, SMS or email about your energy upgrade enquiry. You can opt out at any time.</label>
+        </div>
+        <button type="submit" class="btn-primary form-submit">Submit Enquiry</button>
+        <div class="form-message"></div>
+      </form>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-bottom">
-        <p>Copyright &copy; 2026 Spark Grid Energy | All Rights Reserved</p>
-      </div>
+      <div class="footer-disclaimer">SparkGrid Energy provides sales, coordination and customer support for energy upgrade services. Final eligibility, product approval, installation requirements, rebates, discounts and certificate creation are subject to assessment by the relevant accredited provider, installer and program rules.</div>
+      <div class="footer-bottom"><p>&copy; 2026 SparkGrid Energy. All rights reserved.</p></div>
     </div>
   </footer>
   <script src="js/main.js"></script>
