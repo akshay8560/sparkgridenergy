@@ -1,8 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.mobile-toggle');
   const nav = document.querySelector('.nav');
+  const dropdown = document.querySelector('.nav .dropdown');
+
+  function closeMenu() {
+    nav?.classList.remove('open');
+    toggle?.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    dropdown?.classList.remove('open');
+  }
+
   if (toggle && nav) {
-    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    nav.querySelectorAll('a[href]:not([href="#"])').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+        closeMenu();
+      }
+    });
+  }
+
+  if (dropdown) {
+    const dropdownToggle = dropdown.querySelector(':scope > a');
+    dropdownToggle?.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+      }
+    });
   }
 
   const form = document.getElementById('contact-form');
