@@ -516,6 +516,7 @@ ul { list-style: none; }
   .home-trust-divider { display: none; }
   .home-trust-item { min-width: 45%; padding: 12px 10px; font-size: 0.88rem; }
   .home-trust-inner { gap: 8px 0; }
+  .hero { margin-top: 76px; padding: 48px 0; }
   .hero h1 { font-size: 1.65rem; }
   .hero p { font-size: 0.95rem; }
   .btn-group { flex-direction: column; width: 100%; }
