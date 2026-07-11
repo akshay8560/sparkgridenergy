@@ -205,7 +205,7 @@ ul { list-style: none; }
   min-height: 620px;
   display: flex;
   align-items: center;
-  background: #ffffff;
+  background: #1a2e3b;
   overflow: hidden;
 }
 .hero-home-bg {
@@ -221,23 +221,6 @@ ul { list-style: none; }
 .hero-home-bg::after {
   display: none;
 }
-.hero-home .hero-copy h1 {
-  color: var(--navy);
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9), 0 0 18px rgba(255, 255, 255, 0.75);
-}
-.hero-home .hero-sub {
-  color: #1a2e3b;
-  max-width: 480px;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
-}
-.hero-home .hero-feature {
-  color: var(--navy);
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
-}
-.hero-home .btn-secondary {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(4px);
-}
 .hero-home-inner {
   position: relative;
   z-index: 1;
@@ -249,17 +232,52 @@ ul { list-style: none; }
   min-height: 0;
 }
 .hero-home .hero-copy {
-  max-width: 520px;
+  max-width: 540px;
   width: 100%;
-  padding: 0;
+  padding: 36px 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(30, 58, 95, 0.18);
   position: relative;
   z-index: 2;
 }
 .hero-home .hero-copy::after { display: none; }
+.hero-home .hero-copy h1 {
+  color: var(--navy) !important;
+  text-shadow: none;
+}
+.hero-home .hero-copy h1 span {
+  color: var(--green) !important;
+}
+.hero-home .hero-sub {
+  color: #3d4f63 !important;
+  max-width: 480px;
+  text-shadow: none;
+}
+.hero-home .hero-feature {
+  color: var(--navy) !important;
+  text-shadow: none;
+  font-weight: 600;
+}
+.hero-home .hero-feature span:last-child {
+  color: var(--navy) !important;
+}
+.hero-home .hero-feature-icon {
+  border-color: var(--green);
+  color: var(--green);
+  background: #fff;
+}
+.hero-home .btn-primary {
+  color: #fff !important;
+}
+.hero-home .btn-secondary {
+  background: #fff !important;
+  color: var(--navy) !important;
+  border-color: var(--navy);
+}
 .hero-visual { display: none; }
 .hero-grid {
   display: grid;
