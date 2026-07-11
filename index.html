@@ -7,6 +7,7 @@
   <meta name="keywords" content="VEU air conditioning rebate Victoria, heat pump hot water Melbourne, solar panel installation Melbourne, solar battery Victoria">
   <meta name="google-site-verification" content="googled605a27d736f216c">
   <title>SparkGrid Energy — Smarter Energy Upgrades for Victorian Homes</title>
+  <link rel="preload" as="image" href="images/hero-home.webp" type="image/webp" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,7 +19,7 @@
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="SparkGrid Energy">
+        <img src="images/logo.png" alt="SparkGrid Energy" width="52" height="52" decoding="async">
         <div class="logo-text">
           <span class="brand-main">SPARK GRID</span>
           <span class="brand-energy">ENERGY</span>
@@ -64,7 +65,12 @@
   </header>
 
   <section class="hero hero-home">
-    <div class="hero-home-bg" aria-hidden="true"></div>
+    <div class="hero-home-bg" aria-hidden="true">
+      <picture>
+        <source srcset="images/hero-home.webp" type="image/webp">
+        <img src="images/hero-home.jpg" alt="" width="1600" height="1066" fetchpriority="high" decoding="async">
+      </picture>
+    </div>
     <div class="container hero-home-inner">
       <div class="hero-copy">
         <h1>Smarter Energy<br><span>Better Living</span></h1>
