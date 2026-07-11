@@ -91,4 +91,32 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.add('active');
     }
   });
+
+  const whyCards = document.querySelectorAll('.why-card');
+  if (whyCards.length) {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      whyCards.forEach((card) => {
+        card.classList.add('is-visible', 'is-settled');
+      });
+    } else {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const card = entry.target;
+            card.classList.add('is-visible');
+            card.addEventListener(
+              'animationend',
+              () => card.classList.add('is-settled'),
+              { once: true }
+            );
+            observer.unobserve(card);
+          });
+        },
+        { threshold: 0.18, rootMargin: '0px 0px -40px 0px' }
+      );
+      whyCards.forEach((card) => observer.observe(card));
+    }
+  }
 });
