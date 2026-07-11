@@ -260,10 +260,6 @@ ul { list-style: none; }
   z-index: 2;
 }
 .hero-home .hero-copy::after { display: none; }
-.hero-home .hero-copy h1 { color: var(--navy); }
-.hero-home .hero-sub { color: #5f7083; max-width: 480px; }
-.hero-home .hero-feature { color: var(--navy); }
-.hero-home .btn-secondary { background: #fff; }
 .hero-visual { display: none; }
 .hero-grid {
   display: grid;
