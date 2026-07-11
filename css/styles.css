@@ -124,11 +124,6 @@ ul { list-style: none; }
   background: linear-gradient(135deg, var(--navy) 0%, #2a5280 60%, var(--green-dark) 100%);
   color: var(--white); position: relative; overflow: hidden;
 }
-.hero::after {
-  content: ''; position: absolute; inset: 0;
-  background: url('../images/hero.jpg') center/cover no-repeat;
-  opacity: 0.15;
-}
 .hero .container { position: relative; z-index: 1; max-width: 780px; }
 .hero h1 { font-size: clamp(1.85rem, 5vw, 2.75rem); font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
 .hero p { font-size: 1.05rem; opacity: 0.92; margin-bottom: 32px; line-height: 1.7; }
