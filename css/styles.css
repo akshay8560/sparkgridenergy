@@ -200,17 +200,38 @@ ul { list-style: none; }
   overflow: hidden;
 }
 .hero-home {
-  padding: 48px 0 0;
+  position: relative;
+  padding: 0;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  background: #f7f9fc;
+  overflow: hidden;
+}
+.hero-home-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.88) 34%, rgba(255,255,255,0.35) 58%, rgba(255,255,255,0.08) 100%),
+    url('../images/hero-home.jpg') right center / cover no-repeat;
+  z-index: 0;
 }
 .hero-home-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 1.05fr;
-  gap: 36px;
+  grid-template-columns: minmax(280px, 560px) 1fr;
+  gap: 24px;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px 48px;
+  padding: 56px 20px 64px;
+  width: 100%;
 }
+.hero-home .hero-copy {
+  max-width: 560px;
+}
+.hero-visual { display: none; }
 .hero-grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -712,7 +733,13 @@ ul { list-style: none; }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .upgrades-grid { grid-template-columns: 1fr; }
   .hero-grid { grid-template-columns: 1fr; gap: 32px; }
-  .hero-home-grid { grid-template-columns: 1fr; gap: 28px; padding-bottom: 36px; }
+  .hero-home-grid { grid-template-columns: 1fr; gap: 28px; padding: 40px 20px 48px; }
+  .hero-home { min-height: 480px; }
+  .hero-home-bg {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.75) 45%, rgba(255,255,255,0.25) 100%),
+      url('../images/hero-home.jpg') center 30% / cover no-repeat;
+  }
   .services-bar-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .home-trust-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
 }
@@ -794,10 +821,8 @@ ul { list-style: none; }
 
   .home-trust-divider { display: none; }
   .hero { margin-top: 76px; padding: 0; }
-  .hero-home { padding: 28px 0 0; }
-  .hero-home-grid { grid-template-columns: 1fr; gap: 24px; padding-bottom: 28px; }
-  .hero-visual,
-  .hero-visual img { min-height: 240px; border-radius: 14px; }
+  .hero-home { padding: 0; min-height: 520px; }
+  .hero-home-grid { grid-template-columns: 1fr; gap: 24px; padding: 32px 16px 40px; }
   .hero-features { grid-template-columns: 1fr; }
   .services-bar-grid { grid-template-columns: 1fr; }
   .home-trust-grid { grid-template-columns: 1fr; gap: 20px; }
