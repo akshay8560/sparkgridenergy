@@ -39,13 +39,13 @@ ul { list-style: none; }
 /* Header */
 .header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  background: var(--navy-dark);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+  background: #2a4a6e;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 .header-inner {
   display: flex; align-items: center; justify-content: space-between;
-  height: 72px; position: relative;
+  height: 92px; position: relative;
   padding-left: 8px;
   padding-right: 20px;
   max-width: none;
@@ -136,7 +136,7 @@ ul { list-style: none; }
 
 /* Hero — two column */
 .hero {
-  margin-top: 72px;
+  margin-top: 92px;
   padding: 72px 0 80px;
   background: #ffffff;
   color: var(--text);
@@ -327,7 +327,7 @@ ul { list-style: none; }
 
 /* Page hero */
 .page-hero {
-  margin-top: 72px; padding: 64px 0;
+  margin-top: 92px; padding: 64px 0;
   background: linear-gradient(135deg, var(--navy) 0%, #2a5280 100%);
   color: var(--white); text-align: center;
 }
@@ -564,7 +564,7 @@ ul { list-style: none; }
   .upgrade-info { padding: 20px; }
 }
 @media (max-width: 768px) {
-  .header-inner { height: 64px; padding-left: 8px; padding-right: 12px; }
+  .header-inner { height: 76px; padding-left: 8px; padding-right: 12px; }
   .logo img { height: 40px; }
   .footer .logo img { height: 52px; }
   .logo-text .brand { font-size: 0.9rem; }
@@ -631,7 +631,7 @@ ul { list-style: none; }
   .home-trust-divider { display: none; }
   .home-trust-item { min-width: 45%; padding: 12px 10px; font-size: 0.88rem; }
   .home-trust-inner { gap: 8px 0; }
-  .hero { margin-top: 64px; padding: 40px 0 48px; }
+  .hero { margin-top: 76px; padding: 40px 0 48px; }
   .hero-grid { grid-template-columns: 1fr; gap: 28px; }
   .hero-copy h1 { font-size: 1.75rem; }
   .hero-sub { font-size: 0.95rem; }
@@ -647,7 +647,7 @@ ul { list-style: none; }
   .btn-group .btn-hero-outline { width: 100%; justify-content: center; }
 
   .section { padding: 48px 0; }
-  .page-hero { margin-top: 64px; padding: 48px 0; }
+  .page-hero { margin-top: 76px; padding: 48px 0; }
   .page-hero h1 { font-size: 1.6rem; }
   .page-content { padding: 48px 0; }
   .contact-form { padding: 24px 20px; }
