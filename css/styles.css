@@ -39,7 +39,11 @@ ul { list-style: none; }
 /* Header */
 .header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  background: var(--white); box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+  background: linear-gradient(180deg, #f7fbf8 0%, #f3f7f5 100%);
+  border-bottom: 1px solid rgba(30, 58, 95, 0.08);
+  box-shadow: 0 4px 20px rgba(30, 58, 95, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 .header-inner {
   display: flex; align-items: center; justify-content: space-between;
