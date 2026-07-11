@@ -482,27 +482,53 @@ ul { list-style: none; }
 .journey-steps .arrow { background: none; color: var(--gray-500); padding: 6px 4px; }
 
 /* Our Process Section */
-.process-section { background: var(--gray-100); }
+.process-section { background: #f4f7f5; }
+.process-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 40px;
+}
 .process-label {
-  font-size: 0.82rem; font-weight: 600; letter-spacing: 0.6px;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 1.4px;
   color: var(--green); text-transform: uppercase; margin-bottom: 10px;
 }
 .process-heading {
   font-size: clamp(1.75rem, 4vw, 2.4rem); font-weight: 800;
-  color: var(--text); margin-bottom: 48px; line-height: 1.2;
+  color: var(--navy); margin: 0 0 14px; line-height: 1.2;
+}
+.process-highlight {
+  display: inline-block;
+  margin: 0;
+  padding: 8px 16px;
+  background: var(--green-light);
+  color: var(--green-dark);
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: 999px;
+  line-height: 1.4;
 }
 .process-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
 }
 .process-card {
-  display: flex; flex-direction: column; gap: 14px;
+  display: flex; flex-direction: column; gap: 12px;
+  background: var(--white);
+  border: 1px solid rgba(30, 58, 95, 0.08);
+  border-radius: 16px;
+  padding: 28px 22px;
+  box-shadow: 0 8px 28px rgba(30, 58, 95, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.process-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(30, 58, 95, 0.1);
 }
 .process-num {
-  font-size: 1.85rem; font-weight: 800; color: var(--green);
+  font-size: 1.75rem; font-weight: 800; color: var(--green);
   line-height: 1; display: block;
 }
 .process-card h3 {
-  font-size: 1.2rem; font-weight: 800; color: var(--text); line-height: 1.25;
+  font-size: 1.1rem; font-weight: 800; color: var(--navy); line-height: 1.25;
   margin: 0;
 }
 .process-card p {
