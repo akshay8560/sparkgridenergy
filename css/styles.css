@@ -234,49 +234,51 @@ ul { list-style: none; }
 .hero-home .hero-copy {
   max-width: 540px;
   width: 100%;
-  padding: 36px 32px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 18px;
-  box-shadow: 0 12px 40px rgba(30, 58, 95, 0.18);
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
   position: relative;
   z-index: 2;
 }
 .hero-home .hero-copy::after { display: none; }
 .hero-home .hero-copy h1 {
-  color: var(--navy) !important;
-  text-shadow: none;
+  color: #ffffff !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
 }
 .hero-home .hero-copy h1 span {
-  color: var(--green) !important;
+  color: #7dff9a !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 .hero-home .hero-sub {
-  color: #3d4f63 !important;
+  color: #ffffff !important;
   max-width: 480px;
-  text-shadow: none;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
 }
 .hero-home .hero-feature {
-  color: var(--navy) !important;
-  text-shadow: none;
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
   font-weight: 600;
 }
 .hero-home .hero-feature span:last-child {
-  color: var(--navy) !important;
+  color: #ffffff !important;
 }
 .hero-home .hero-feature-icon {
-  border-color: var(--green);
-  color: var(--green);
-  background: #fff;
+  border-color: #7dff9a;
+  color: #7dff9a;
+  background: rgba(0, 0, 0, 0.25);
 }
 .hero-home .btn-primary {
   color: #fff !important;
 }
 .hero-home .btn-secondary {
-  background: #fff !important;
+  background: rgba(255, 255, 255, 0.95) !important;
   color: var(--navy) !important;
-  border-color: var(--navy);
+  border-color: #fff;
 }
 .hero-visual { display: none; }
 .hero-grid {
