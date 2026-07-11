@@ -125,10 +125,7 @@ ul { list-style: none; }
 .hero {
   margin-top: 88px;
   padding: 72px 0 80px;
-  background:
-    radial-gradient(ellipse 80% 60% at 100% 0%, rgba(46, 158, 75, 0.12) 0%, transparent 55%),
-    radial-gradient(ellipse 70% 50% at 0% 100%, rgba(30, 58, 95, 0.08) 0%, transparent 50%),
-    linear-gradient(165deg, #f4f8f6 0%, #eef4f8 45%, #f7faf8 100%);
+  background: #ffffff;
   color: var(--text);
   position: relative;
   overflow: hidden;
