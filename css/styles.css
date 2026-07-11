@@ -219,31 +219,24 @@ ul { list-style: none; }
   background-size: cover;
 }
 .hero-home-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.82) 0%,
-    rgba(255, 255, 255, 0.72) 28%,
-    rgba(255, 255, 255, 0.4) 48%,
-    rgba(255, 255, 255, 0.12) 68%,
-    rgba(255, 255, 255, 0) 85%
-  );
-  pointer-events: none;
+  display: none;
 }
 .hero-home .hero-copy h1 {
   color: var(--navy);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9), 0 0 18px rgba(255, 255, 255, 0.75);
 }
 .hero-home .hero-sub {
-  color: #3d4f63;
+  color: #1a2e3b;
   max-width: 480px;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.55);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
 }
 .hero-home .hero-feature {
   color: var(--navy);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+.hero-home .btn-secondary {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
 }
 .hero-home-inner {
   position: relative;
@@ -780,13 +773,7 @@ ul { list-style: none; }
     background-position: center 30%;
   }
   .hero-home-bg::after {
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.78) 0%,
-      rgba(255, 255, 255, 0.62) 45%,
-      rgba(255, 255, 255, 0.25) 70%,
-      rgba(255, 255, 255, 0.05) 100%
-    );
+    display: none;
   }
   .services-bar-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .home-trust-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
