@@ -44,8 +44,19 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const msg = form.querySelector('.form-message');
       const data = Object.fromEntries(new FormData(form));
+      const isEnquire = form.classList.contains('enquire-form');
 
-      if (!data.fullName || !data.email || !data.phone) {
+      if (!data.fullName || !data.phone) {
+        msg.className = 'form-message error';
+        msg.textContent = 'Please fill in all required fields.';
+        return;
+      }
+      if (!isEnquire && !data.email) {
+        msg.className = 'form-message error';
+        msg.textContent = 'Please fill in all required fields.';
+        return;
+      }
+      if (isEnquire && (!data.service || !data.postcode)) {
         msg.className = 'form-message error';
         msg.textContent = 'Please fill in all required fields.';
         return;
@@ -64,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (srcField && params.get('utm_source')) {
         srcField.value = params.get('utm_source');
       }
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+      if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
         msg.className = 'form-message error';
         msg.textContent = 'Please enter a valid email address.';
         return;
