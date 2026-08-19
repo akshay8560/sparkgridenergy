@@ -130,4 +130,52 @@ document.addEventListener('DOMContentLoaded', () => {
       whyCards.forEach((card) => observer.observe(card));
     }
   }
+
+  // Multi-step form logic
+  const multistepForm = document.getElementById('sp-multistep-form');
+  if (multistepForm) {
+    const steps = multistepForm.querySelectorAll('.sp-form-step');
+    const radios = multistepForm.querySelectorAll('input[name="has_solar"]');
+    const btnsBack = multistepForm.querySelectorAll('.sp-btn-back');
+    const btnsContinue = multistepForm.querySelectorAll('.sp-btn-continue[type="button"]');
+
+    function goToStep(targetStep) {
+      steps.forEach(step => step.style.display = 'none');
+      const targetEl = document.getElementById(`sp-step-${targetStep}`);
+      if (targetEl) targetEl.style.display = 'block';
+    }
+
+    radios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        goToStep(2);
+      });
+    });
+
+    btnsBack.forEach(btn => {
+      btn.addEventListener('click', () => {
+        goToStep(btn.dataset.target);
+      });
+    });
+
+    btnsContinue.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Simple validation check before proceeding
+        const currentStepEl = btn.closest('.sp-form-step');
+        const inputs = currentStepEl.querySelectorAll('input[required], select[required]');
+        let valid = true;
+        inputs.forEach(input => {
+          if (!input.value) {
+            valid = false;
+            input.style.borderColor = 'red';
+          } else {
+            input.style.borderColor = '#ddd';
+          }
+        });
+        
+        if (valid) {
+          goToStep(btn.dataset.target);
+        }
+      });
+    });
+  }
 });

@@ -41,53 +41,117 @@
       </div>
       
       <div class="sp-hero-form-card">
-        <div class="sp-step-indicator">
-          <div class="sp-step-dot active">1</div>
-          <div class="sp-step-dot active">2</div>
-          <div class="sp-step-dot">3</div>
-        </div>
-        
-        <h3>Tell Us About Your Upgrade</h3>
-        <p>A few details about what you're after and the property.</p>
-        
-        <form action="contact.html" method="GET">
-          <div class="sp-form-group">
-            <label class="sp-form-label">Product <span>*</span></label>
-            <select name="product" required>
-              <option value="Solar Battery" selected>Solar Battery</option>
-              <option value="Solar Panels">Solar Panels</option>
-              <option value="Heat Pump">Heat Pump Hot Water</option>
-            </select>
+        <form id="sp-multistep-form" action="contact.html" method="GET">
+          
+          <!-- STEP 1 -->
+          <div id="sp-step-1" class="sp-form-step">
+            <div class="sp-step-indicator">
+              <div class="sp-step-dot active">1</div>
+              <div class="sp-step-dot">2</div>
+              <div class="sp-step-dot">3</div>
+            </div>
+            
+            <h3>Check Your Eligibility</h3>
+            <p>Do you currently have Solar Panel?</p>
+            
+            <div class="sp-radio-group">
+              <label class="sp-radio-label">
+                <input type="radio" name="has_solar" value="yes" required>
+                Yes, I have Solar Panel
+              </label>
+              <label class="sp-radio-label">
+                <input type="radio" name="has_solar" value="no" required>
+                No, I don't have Solar Panel
+              </label>
+            </div>
           </div>
-          <div class="sp-form-group">
-            <label class="sp-form-label">Preferred Brand <span>*</span></label>
-            <select name="brand" required>
-              <option value="" disabled selected>Select...</option>
-              <option value="Hiconics">Hiconics</option>
-              <option value="Sofar">Sofar</option>
-              <option value="Fox ESS">Fox ESS</option>
-              <option value="Open">Open to Recommendations</option>
-            </select>
-          </div>
-          <div class="sp-form-group">
-            <label class="sp-form-label">Full Street Address of Property</label>
-            <input type="text" name="address" placeholder="Unit 2, 9 Motto Court">
-          </div>
-          <div class="sp-form-grid">
+
+          <!-- STEP 2 -->
+          <div id="sp-step-2" class="sp-form-step" style="display: none;">
+            <div class="sp-step-indicator">
+              <div class="sp-step-dot active">1</div>
+              <div class="sp-step-dot active">2</div>
+              <div class="sp-step-dot">3</div>
+            </div>
+            
+            <h3>Tell Us About Your Upgrade</h3>
+            <p>A few details about what you're after and the property.</p>
+            
             <div class="sp-form-group">
-              <label class="sp-form-label">Suburb <span>*</span></label>
-              <input type="text" name="suburb" placeholder="Hoppers Crossing" required>
+              <label class="sp-form-label">Product <span>*</span></label>
+              <select name="product" required>
+                <option value="Solar Battery" selected>Solar Battery</option>
+                <option value="Solar Panels">Solar Panels</option>
+                <option value="Heat Pump">Heat Pump Hot Water</option>
+              </select>
             </div>
             <div class="sp-form-group">
-              <label class="sp-form-label">Postcode <span>*</span></label>
-              <input type="text" name="postcode" placeholder="3029" required>
+              <label class="sp-form-label">Preferred Brand <span>*</span></label>
+              <select name="brand" required>
+                <option value="" disabled selected>Select...</option>
+                <option value="Hiconics">Hiconics</option>
+                <option value="Sofar">Sofar</option>
+                <option value="Fox ESS">Fox ESS</option>
+                <option value="Open">Open to Recommendations</option>
+              </select>
+            </div>
+            <div class="sp-form-group">
+              <label class="sp-form-label">Full Street Address of Property</label>
+              <input type="text" name="address" placeholder="Unit 2, 9 Motto Court">
+            </div>
+            <div class="sp-form-grid">
+              <div class="sp-form-group">
+                <label class="sp-form-label">Suburb <span>*</span></label>
+                <input type="text" name="suburb" placeholder="Hoppers Crossing" required>
+              </div>
+              <div class="sp-form-group">
+                <label class="sp-form-label">Postcode <span>*</span></label>
+                <input type="text" name="postcode" placeholder="3029" required>
+              </div>
+            </div>
+            
+            <div class="sp-form-actions">
+              <button type="button" class="sp-btn-back" data-target="1">← Back</button>
+              <button type="button" class="sp-btn-continue" data-target="3">Continue →</button>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div id="sp-step-3" class="sp-form-step" style="display: none;">
+            <div class="sp-step-indicator">
+              <div class="sp-step-dot active">1</div>
+              <div class="sp-step-dot active">2</div>
+              <div class="sp-step-dot active">3</div>
+            </div>
+            
+            <h3>Just a Few More Details</h3>
+            <p>Please provide your contact info so we can send your quote.</p>
+            
+            <div class="sp-form-grid">
+              <div class="sp-form-group">
+                <label class="sp-form-label">First Name <span>*</span></label>
+                <input type="text" name="first_name" required>
+              </div>
+              <div class="sp-form-group">
+                <label class="sp-form-label">Last Name <span>*</span></label>
+                <input type="text" name="last_name" required>
+              </div>
+            </div>
+            <div class="sp-form-group">
+              <label class="sp-form-label">Email Address <span>*</span></label>
+              <input type="email" name="email" required>
+            </div>
+            <div class="sp-form-group">
+              <label class="sp-form-label">Phone Number <span>*</span></label>
+              <input type="tel" name="phone" required>
+            </div>
+            
+            <div class="sp-form-actions">
+              <button type="button" class="sp-btn-back" data-target="2">← Back</button>
+              <button type="submit" class="sp-btn-continue">Submit →</button>
             </div>
           </div>
           
-          <div class="sp-form-actions">
-            <button type="button" class="sp-btn-back">← Back</button>
-            <button type="submit" class="sp-btn-continue">Continue →</button>
-          </div>
         </form>
       </div>
     </div>
