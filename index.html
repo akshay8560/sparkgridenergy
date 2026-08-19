@@ -61,48 +61,58 @@
   </header>
 
   <!-- 1. HERO -->
-  <section class="hero hero-home">
-    <div class="hero-home-bg" aria-hidden="true">
-      <picture>
-        <source srcset="images/hero-home.webp" type="image/webp">
-        <img src="images/hero-home.jpg" alt="" width="1600" height="1066" fetchpriority="high" decoding="async">
-      </picture>
-    </div>
-    <div class="container hero-home-inner">
-      <div class="hero-copy">
-        <h1>Lower bills<br><span>start with</span><span>better advice</span></h1>
-        <p class="hero-sub">No standard packages. No unnecessary upselling. Just practical recommendations built around your home.</p>
-        <div class="hero-features">
-          <div class="hero-feature">
-            <span class="hero-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
-            </span>
-            <span>Energy Efficient</span>
+  <section class="sp-hero-new">
+    <div class="container sp-hero-grid-new">
+      
+      <!-- Left Content -->
+      <div class="sp-hero-copy-new">
+        <h1>Power Your Home.<br><span style="color: #4CAF50;">Save More. Every Day.</span></h1>
+        <p>Store excess solar, reduce your energy bills and take control of your power with <strong>FoxESS</strong> Battery solutions.</p>
+        
+        <div class="sp-hero-price-block">
+          <div>
+            <img src="images/fox-ess-logo.webp" alt="Fox ESS Batteries" style="height: 60px; object-fit: contain; background: white; padding: 10px 20px; border-radius: 8px; margin-bottom: 20px;">
+            <div style="font-size: 0.9rem; letter-spacing: 1px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Starting From</div>
+            <div style="background: #4CAF50; color: #fff; font-size: 4rem; font-weight: 800; padding: 10px 20px; border-radius: 12px; display: inline-block; line-height: 1;">$5,499<span style="font-size: 2rem; vertical-align: top;">*</span></div>
+            <div style="font-size: 0.8rem; margin-top: 8px; opacity: 0.8;">*T&C Apply</div>
           </div>
-          <div class="hero-feature">
-            <span class="hero-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
-            </span>
-            <span>Trusted Partners</span>
-          </div>
-          <div class="hero-feature">
-            <span class="hero-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/><path d="M9 16h6"/></svg>
-            </span>
-            <span>Save on Energy Bills</span>
-          </div>
-          <div class="hero-feature">
-            <span class="hero-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 12a4 4 0 100-8 4 4 0 000 8z"/><path d="M4 21v-1a6 6 0 0112 0v1"/><path d="M18 11v4M16 13h4"/></svg>
-            </span>
-            <span>End to End Support</span>
-          </div>
-        </div>
-        <div class="btn-group">
-          <a href="enquire.html" class="btn-primary">Get a Free Quote <span aria-hidden="true">→</span></a>
-          <a href="enquire.html" class="btn-secondary">Check Eligibility <span aria-hidden="true">→</span></a>
+          <img src="images/fox-ess-battery.webp" alt="FoxESS Battery" style="height: 380px; object-fit: contain;">
         </div>
       </div>
+      
+      <!-- Right Form Card -->
+      <div class="sp-hero-form-card-new">
+        <h3 style="font-size: 2rem; font-weight: 800; text-align: center; margin-bottom: 8px;">Get Your Free Quote</h3>
+        <p style="text-align: center; color: #4CAF50; font-weight: 600; margin-bottom: 24px;">It only takes 30 seconds</p>
+        
+        <form action="contact.html" method="GET" style="display: flex; flex-direction: column; gap: 16px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <input type="text" name="full_name" placeholder="Full Name" required style="width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+            <input type="tel" name="phone" placeholder="Phone Number" required style="width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+          </div>
+          <input type="email" name="email" placeholder="Email Address" required style="width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+          <input type="text" name="postcode" placeholder="Postcode" required style="width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+          
+          <select name="property_owner" required style="width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; color: #666;">
+            <option value="" disabled selected>Are you the owner of the property?</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+          
+          <textarea name="needs" placeholder="Tell us about your energy needs" rows="3" style="width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; resize: none;"></textarea>
+          
+          <div style="text-align: center; font-size: 0.85rem; color: #666; margin-top: 8px;">
+            🔒 Your information is safe and secure.
+          </div>
+          
+          <button type="submit" style="width: 100%; padding: 18px; background: #02b67a; color: #fff; border: none; border-radius: 8px; font-size: 1.2rem; font-weight: 700; cursor: pointer; transition: background 0.2s;">Get My Free Quote</button>
+          
+          <div style="text-align: center; font-size: 0.85rem; color: #666;">
+            No obligation. No pressure.
+          </div>
+        </form>
+      </div>
+
     </div>
   </section>
 
