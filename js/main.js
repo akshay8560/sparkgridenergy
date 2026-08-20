@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Google Sheets Submission Logic ---
   // IMPORTANT: Replace this URL with your Google Apps Script Web app URL!
-  const GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzubvByX6uttMMZhLkq9S5QfiUaAFZiA7Osbil-Ns-UPdHRhAtjnhjeey0bLfU_1q54WQ/exec";
+  const GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzFTLnNX2y4Fqq33a0RHgOZI1U7wXLPV_BDMRs5G9LjTqytVK5e5Mbdd-WtpSGLvQ19Ag/exec";
 
   function handleGenericFormSubmit(e, form) {
     e.preventDefault();
