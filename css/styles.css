@@ -988,8 +988,8 @@ ul { list-style: none; }
   box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 .sp-product-img-wrapper {
-  flex: 0 0 40%;
-  padding: 24px 16px;
+  flex: 0 0 48%; /* Increased from 42% */
+  padding: 12px; /* Reduced from 24px 16px */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -997,9 +997,9 @@ ul { list-style: none; }
 }
 .sp-product-img {
   width: 100%;
-  max-height: 280px;
+  max-height: 350px; /* Increased from 280px */
   object-fit: contain;
-  mix-blend-mode: multiply; /* Removes the solid white background on the images */
+  transform: scale(1.1); /* Slight bump to make them fill the space better */
 }
 .sp-product-content {
   flex: 1;
