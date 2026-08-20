@@ -56,23 +56,23 @@ ul { list-style: none; }
 .header-inner {
   display: flex; align-items: center; justify-content: space-between;
   height: 100px; position: relative;
-  max-width: 1200px;
+  max-width: 1350px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
   gap: 16px;
 }
 .header .container.header-inner {
-  max-width: 1200px;
-  padding: 0 20px;
+  max-width: 1350px;
+  padding: 0 16px;
 }
 .logo { display: flex; align-items: center; gap: 0; flex-shrink: 0; }
 .logo img {
-  height: 110px;
+  height: 85px;
   width: auto;
   display: block;
   clip-path: inset(0 0 11% 0);
-  margin-bottom: -11px;
+  margin-bottom: -9px;
 }
 .logo-text { display: none; }
 .logo-text {
@@ -115,10 +115,11 @@ ul { list-style: none; }
 .footer .logo-text .brand-energy::before,
 .footer .logo-text .brand-energy::after { background: #7dd99a; }
 
-.nav { display: flex; align-items: center; gap: 2px; flex-wrap: wrap; justify-content: flex-end; }
+.nav { display: flex; align-items: center; gap: 2px; flex-wrap: nowrap; justify-content: flex-end; }
 .nav > a, .nav .dropdown > a {
-  font-size: 0.84rem; font-weight: 500; color: var(--gray-700);
-  padding: 8px 10px; border-radius: 0; position: relative;
+  font-size: 0.82rem; font-weight: 500; color: var(--gray-700);
+  padding: 8px 8px; border-radius: 0; position: relative;
+  white-space: nowrap;
 }
 .nav > a:hover, .nav .dropdown > a:hover { color: var(--green); }
 .nav > a.active {
