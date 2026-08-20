@@ -2660,14 +2660,14 @@ body.menu-open { overflow: hidden; }
   height: 100%;
 }
 .battery-hero-img {
-  max-width: 215px; /* Keeps the size reasonable */
-  max-height: 380px; /* Forces it to remain a short height */
+  max-width: 280px; /* Increased to make it larger */
+  max-height: 480px; /* Increased height limit */
   width: auto;
   height: auto;
   object-fit: contain; /* Prevents any distortion */
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
   margin-bottom: -40px; /* Pull it down slightly to look grounded */
-  margin-right: 25px; /* Shift it slightly to the left */
+  margin-right: 60px; /* Shift it further to the left */
   transition: transform 1.2s ease-in-out;
   cursor: pointer;
 }
