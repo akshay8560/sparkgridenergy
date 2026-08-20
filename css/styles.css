@@ -971,7 +971,7 @@ ul { list-style: none; }
 }
 .sp-products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
 }
 .sp-product-card {
@@ -2799,8 +2799,9 @@ body.menu-open { overflow: hidden; }
     gap: 40px;
   }
   .battery-hero-img {
-    max-width: 250px;
-    margin-bottom: 0;
+    max-width: 200px;
+    margin-bottom: 20px;
+    transform: translateY(0);
   }
   .solar-hero-content h1 {
     font-size: 3rem;
@@ -3228,5 +3229,19 @@ body.menu-open { overflow: hidden; }
   }
   .benefits-header h2 {
     font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sp-product-card {
+    flex-direction: column;
+  }
+  .sp-product-img-wrapper {
+    flex: none;
+    width: 100%;
+    padding: 24px;
+  }
+  .sp-product-content {
+    padding: 24px 24px 32px 24px;
   }
 }
