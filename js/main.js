@@ -173,6 +173,29 @@ document.addEventListener('DOMContentLoaded', () => {
     heroLeadForm.addEventListener('submit', (e) => handleGenericFormSubmit(e, heroLeadForm));
   }
 
+  // Attach to Popup form (and handle 10-second timer)
+  const popupLeadForm = document.getElementById('popup-lead-form');
+  const delayedPopupModal = document.getElementById('delayedPopupModal');
+  if (popupLeadForm) {
+    popupLeadForm.addEventListener('submit', (e) => handleGenericFormSubmit(e, popupLeadForm));
+  }
+  if (delayedPopupModal) {
+    // Only show if they haven't seen it in this session (optional, but good UX)
+    if (!sessionStorage.getItem('popupShown')) {
+      setTimeout(() => {
+        delayedPopupModal.classList.add('active');
+        sessionStorage.setItem('popupShown', 'true');
+      }, 10000); // 10 seconds
+    }
+  }
+
+  // Close function for delayed popup
+  window.closePopupModal = function() {
+    if (delayedPopupModal) {
+      delayedPopupModal.classList.remove('active');
+    }
+  }
+
   const header = document.querySelector('.header');
   if (header) {
     window.addEventListener('scroll', () => {

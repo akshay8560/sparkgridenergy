@@ -523,6 +523,57 @@
       <div class="footer-bottom"><p>&copy; 2026 SparkGrid Energy. All rights reserved.</p></div>
     </div>
   </footer>
+
+  <!-- Delayed Popup Modal -->
+  <div id="delayedPopupModal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 480px; padding: 32px 28px; text-align: left;">
+      <button class="modal-close" aria-label="Close" onclick="closePopupModal()">&times;</button>
+      <form id="popup-lead-form" class="check-options-form">
+        <h3>Check your options</h3>
+        <p class="form-intro">Four quick details. We'll call to discuss what may suit your property.</p>
+        
+        <input type="hidden" name="sheetTabName" value="Home Tab Data">
+        
+        <div class="form-group">
+          <label>What are you interested in? *</label>
+          <select name="service" required>
+            <option value="Air conditioning">Air conditioning</option>
+            <option value="Solar Batteries">Solar Batteries</option>
+            <option value="Solar Panels">Solar Panels</option>
+            <option value="Heat Pump Hot Water">Heat Pump Hot Water</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>Full name *</label>
+          <input type="text" name="fullName" placeholder="Your name" required>
+        </div>
+        
+        <div class="form-group">
+          <label>Mobile number *</label>
+          <input type="tel" name="phone" placeholder="04XX XXX XXX" required>
+        </div>
+        
+        <div class="form-group">
+          <label>Postcode *</label>
+          <input type="text" name="postcode" placeholder="e.g. 3000" required>
+        </div>
+        
+        <div class="form-consent">
+          <label class="checkbox-label">
+            <input type="checkbox" name="consent" required>
+            <span class="checkmark"></span>
+            <span class="consent-text">I agree that SparkGrid Energy may contact me about this enquiry by phone or SMS.</span>
+          </label>
+        </div>
+        
+        <button type="submit" class="btn-submit">Check my upgrade options</button>
+        <p class="form-disclaimer">Free and no obligation. Your details are used for this enquiry.</p>
+        <div class="form-message"></div>
+      </form>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
 </body>
 </html>
