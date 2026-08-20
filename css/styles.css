@@ -2661,8 +2661,9 @@ body.menu-open { overflow: hidden; }
   height: 100%;
 }
 .battery-hero-img {
-  max-width: 250px; /* Reduced from 320px for better fit */
-  height: auto;
+  max-height: 450px; /* Control size by height to prevent it getting too tall */
+  width: auto;
+  max-width: 100%;
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
   margin-bottom: -40px; /* Pull it down slightly to look grounded */
 }
