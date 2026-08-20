@@ -38,14 +38,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const form = document.getElementById('contact-form');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const msg = form.querySelector('.form-message');
-      const data = Object.fromEntries(new FormData(form));
-      const isEnquire = form.classList.contains('enquire-form');
+  // --- Thank You Modal Logic ---
+  function initThankYouModal() {
+    if (document.getElementById('thank-you-modal')) return;
+    const modalHTML = `
+      <div class="modal-overlay" id="thank-you-modal">
+        <div class="modal-content">
+          <button class="modal-close" onclick="closeThankYouModal()">&times;</button>
+          <div class="modal-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h3 class="modal-title">Thank You!</h3>
+          <p class="modal-desc">Your details have been successfully submitted. Our team will contact you shortly.</p>
+          <button class="modal-btn" onclick="closeThankYouModal()">Continue</button>
+        </div>
+      </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+  }
 
+  window.closeThankYouModal = function() {
+    const modal = document.getElementById('thank-you-modal');
+    if (modal) modal.classList.remove('active');
+  };
+
+  function showThankYouModal() {
+    initThankYouModal();
+    const modal = document.getElementById('thank-you-modal');
+    if (modal) {
+      // Small delay to ensure DOM is ready for transition
+      setTimeout(() => modal.classList.add('active'), 10);
+    }
+  }
+
+  // --- Google Sheets Submission Logic ---
+  // IMPORTANT: Replace this URL with your Google Apps Script Web app URL!
+  const GOOGLE_SHEET_WEBHOOK_URL = "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
+
+  function handleGenericFormSubmit(e, form) {
+    e.preventDefault();
+    const msg = form.querySelector('.form-message');
+    const submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('input[type="submit"]');
+    const originalBtnText = submitBtn ? (submitBtn.innerText || submitBtn.value) : 'Submit';
+    
+    const data = Object.fromEntries(new FormData(form));
+    const isEnquire = form.classList.contains('enquire-form');
+
+    // Validation
+    if (msg) {
       if (!data.fullName || !data.phone) {
         msg.className = 'form-message error';
         msg.textContent = 'Please fill in all required fields.';
@@ -61,30 +103,68 @@ document.addEventListener('DOMContentLoaded', () => {
         msg.textContent = 'Please fill in all required fields.';
         return;
       }
-      if (!data.consent) {
+      if (form.querySelector('input[name="consent"]') && !data.consent) {
         msg.className = 'form-message error';
         msg.textContent = 'Please agree to the consent terms to continue.';
         return;
       }
+    }
 
-      const tsField = form.querySelector('#consentTimestamp');
-      if (tsField) tsField.value = new Date().toISOString();
+    const tsField = form.querySelector('#consentTimestamp');
+    if (tsField) tsField.value = new Date().toISOString();
 
-      const params = new URLSearchParams(window.location.search);
-      const srcField = form.querySelector('#leadSource');
-      if (srcField && params.get('utm_source')) {
-        srcField.value = params.get('utm_source');
-      }
-      if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-        msg.className = 'form-message error';
-        msg.textContent = 'Please enter a valid email address.';
-        return;
-      }
+    const params = new URLSearchParams(window.location.search);
+    const srcField = form.querySelector('#leadSource');
+    if (srcField && params.get('utm_source')) {
+      srcField.value = params.get('utm_source');
+    }
 
-      msg.className = 'form-message success';
-      msg.textContent = 'Thank you! Your enquiry has been received. We will contact you shortly.';
+    if (submitBtn) {
+      if (submitBtn.innerText) submitBtn.innerText = 'Sending...';
+      if (submitBtn.value) submitBtn.value = 'Sending...';
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.7';
+    }
+
+    // Submit via POST to Google Apps Script
+    fetch(GOOGLE_SHEET_WEBHOOK_URL, {
+      method: 'POST',
+      body: new FormData(form),
+      mode: 'no-cors' // Prevents CORS errors on static sites, but we won't get a readable JSON response
+    }).then(() => {
       form.reset();
+      if (msg) msg.textContent = '';
+      showThankYouModal();
+    }).catch(err => {
+      console.error('Error submitting form', err);
+      if (msg) {
+        msg.className = 'form-message error';
+        msg.textContent = 'There was an error submitting your details. Please try again.';
+      }
+    }).finally(() => {
+      if (submitBtn) {
+        if (submitBtn.innerText) submitBtn.innerText = originalBtnText;
+        if (submitBtn.value) submitBtn.value = originalBtnText;
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+      }
     });
+  }
+
+  // Attach to Contact & Enquire forms
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => handleGenericFormSubmit(e, contactForm));
+  }
+  
+  // Attach to Air Conditioning forms
+  const acLeadForm = document.getElementById('acLeadForm');
+  if (acLeadForm) {
+    acLeadForm.addEventListener('submit', (e) => handleGenericFormSubmit(e, acLeadForm));
+  }
+  const acBottomForm = document.getElementById('acBottomForm');
+  if (acBottomForm) {
+    acBottomForm.addEventListener('submit', (e) => handleGenericFormSubmit(e, acBottomForm));
   }
 
   const header = document.querySelector('.header');
@@ -131,9 +211,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Multi-step form logic
+  // Multi-step form logic (Solar Batteries)
   const multistepForm = document.getElementById('sp-multistep-form');
   if (multistepForm) {
+    // Intercept submit
+    multistepForm.addEventListener('submit', (e) => {
+      handleGenericFormSubmit(e, multistepForm);
+    });
+
     const steps = multistepForm.querySelectorAll('.sp-form-step');
     const radios = multistepForm.querySelectorAll('input[name="has_solar"]');
     const btnsBack = multistepForm.querySelectorAll('.sp-btn-back');
@@ -159,7 +244,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btnsContinue.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Simple validation check before proceeding
         const currentStepEl = btn.closest('.sp-form-step');
         const inputs = currentStepEl.querySelectorAll('input[required], select[required]');
         let valid = true;
