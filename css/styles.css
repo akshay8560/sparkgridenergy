@@ -2640,18 +2640,32 @@ body.menu-open { overflow: hidden; }
 .solar-hero-bg {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('../images/hero-home.jpg');
+  /* Removed heavy dark gradient, kept a very light one just in case, using the new city background */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('../images/solar-hero-bg-city.jpg');
   background-size: cover;
   background-position: center;
   z-index: -1;
 }
 .solar-hero-grid {
   display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 40px;
-  align-items: center;
+  grid-template-columns: 1fr auto 420px;
+  gap: 20px;
+  align-items: center; /* Keep text and form centered vertically */
   width: 100%;
 }
+.solar-hero-battery-display {
+  display: flex;
+  justify-content: center;
+  align-self: end; /* Only align the battery to the bottom */
+  height: 100%;
+}
+.battery-hero-img {
+  max-width: 320px; /* Adjust size based on visual balance */
+  height: auto;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+  margin-bottom: -40px; /* Pull it down slightly to look grounded */
+}
+
 .solar-hero-content h1 {
   font-size: 3rem;
   font-weight: 800;
@@ -2780,6 +2794,10 @@ body.menu-open { overflow: hidden; }
   .solar-hero-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  .battery-hero-img {
+    max-width: 250px;
+    margin-bottom: 0;
   }
   .solar-hero-content h1 {
     font-size: 3rem;
