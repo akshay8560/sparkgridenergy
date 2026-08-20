@@ -2629,13 +2629,12 @@ body.menu-open { overflow: hidden; }
 /* Solar Hero New */
 .solar-hero-new {
   position: relative;
-  padding: 120px 0 80px;
-  min-height: 80vh;
+  padding: 60px 0;
+  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   color: white;
   overflow: hidden;
-  margin-top: -80px; /* Offset for transparent header if needed */
 }
 .solar-hero-bg {
   position: absolute;
@@ -2647,31 +2646,31 @@ body.menu-open { overflow: hidden; }
 }
 .solar-hero-grid {
   display: grid;
-  grid-template-columns: 1fr 480px;
-  gap: 60px;
+  grid-template-columns: 1fr 420px;
+  gap: 40px;
   align-items: center;
   width: 100%;
 }
 .solar-hero-content h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 .solar-hero-content .highlight-green {
   color: #6a9c51;
 }
 .solar-hero-subtext {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   max-width: 500px;
 }
 .solar-hero-brand {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .solar-hero-brand .brand-logo {
-  max-width: 200px;
+  max-width: 160px;
 }
 .solar-hero-pricing {
   display: flex;
@@ -2679,7 +2678,7 @@ body.menu-open { overflow: hidden; }
   align-items: flex-start;
 }
 .solar-hero-pricing .pricing-label {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 8px;
@@ -2688,9 +2687,9 @@ body.menu-open { overflow: hidden; }
 .solar-hero-pricing .pricing-badge {
   background: #6a9c51;
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  padding: 4px 24px;
+  padding: 4px 20px;
   border-radius: 4px;
   margin-bottom: 8px;
   display: inline-block;
@@ -2704,42 +2703,42 @@ body.menu-open { overflow: hidden; }
 .solar-hero-form-wrapper {
   background: white;
   border-radius: 12px;
-  padding: 40px;
+  padding: 32px;
   color: #333;
   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 .solar-hero-form-card h2 {
   text-align: center;
   color: var(--navy);
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 800;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .solar-hero-form-card .form-subtitle {
   text-align: center;
   color: #6a9c51;
   font-weight: 600;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 .solar-hero-form-card form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 .solar-hero-form-card .form-row-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 12px;
 }
 .solar-hero-form-card input,
 .solar-hero-form-card select,
 .solar-hero-form-card textarea {
   width: 100%;
-  padding: 16px;
+  padding: 12px;
   border: 1px solid #ddd;
   border-radius: 6px;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 .solar-hero-form-card .secure-badge {
   display: flex;
@@ -2748,7 +2747,7 @@ body.menu-open { overflow: hidden; }
   gap: 8px;
   font-size: 0.85rem;
   color: var(--gray-600);
-  margin-top: 8px;
+  margin-top: 4px;
 }
 .solar-hero-form-card .secure-badge svg {
   width: 16px;
@@ -2758,13 +2757,13 @@ body.menu-open { overflow: hidden; }
   background: #10a360;
   color: white;
   border: none;
-  padding: 18px;
+  padding: 14px;
   border-radius: 6px;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   cursor: pointer;
   transition: background 0.2s;
-  margin-top: 8px;
+  margin-top: 4px;
 }
 .solar-hero-form-card .btn-submit-hero:hover {
   background: #0d8a51;
