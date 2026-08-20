@@ -2635,6 +2635,7 @@ body.menu-open { overflow: hidden; }
   align-items: center;
   color: white;
   overflow: hidden;
+  margin-top: 100px; /* Offset for fixed header */
 }
 .solar-hero-bg {
   position: absolute;
