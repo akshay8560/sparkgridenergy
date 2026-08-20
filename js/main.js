@@ -294,34 +294,4 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-
-  // --- 3D Hover Tilt for Hero Battery ---
-  const batteryImg = document.querySelector('.battery-hero-img');
-  if (batteryImg) {
-    batteryImg.addEventListener('mousemove', (e) => {
-      const rect = batteryImg.getBoundingClientRect();
-      const x = e.clientX - rect.left; // x position within the element.
-      const y = e.clientY - rect.top;  // y position within the element.
-      
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      
-      const rotateX = ((y - centerY) / centerY) * -15; // Max 15deg tilt
-      const rotateY = ((x - centerX) / centerX) * 15;
-      
-      // We must preserve the existing translateY(120px) base transform
-      batteryImg.style.transform = `translateY(120px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    });
-    
-    batteryImg.addEventListener('mouseleave', () => {
-      // Temporarily add a longer transition for a smooth snap back to resting position
-      batteryImg.style.transition = 'transform 0.5s ease-out';
-      batteryImg.style.transform = 'translateY(120px) perspective(1000px) rotateX(0deg) rotateY(0deg)';
-      
-      // Reset transition back to fast for next hover
-      setTimeout(() => {
-        batteryImg.style.transition = 'transform 0.1s ease-out';
-      }, 500);
-    });
-  }
 });

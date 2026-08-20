@@ -2664,6 +2664,11 @@ body.menu-open { overflow: hidden; }
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
   margin-bottom: -40px; /* Pull it down slightly to look grounded */
   margin-right: 25px; /* Shift it slightly to the left */
+  transition: transform 1.2s ease-in-out;
+  cursor: pointer;
+}
+.battery-hero-img:hover {
+  transform: rotateY(360deg);
 }
 
 .solar-hero-content h1 {
