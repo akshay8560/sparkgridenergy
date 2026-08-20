@@ -167,6 +167,12 @@ document.addEventListener('DOMContentLoaded', () => {
     acBottomForm.addEventListener('submit', (e) => handleGenericFormSubmit(e, acBottomForm));
   }
 
+  // Attach to Homepage Hero form
+  const heroLeadForm = document.getElementById('hero-lead-form');
+  if (heroLeadForm) {
+    heroLeadForm.addEventListener('submit', (e) => handleGenericFormSubmit(e, heroLeadForm));
+  }
+
   const header = document.querySelector('.header');
   if (header) {
     window.addEventListener('scroll', () => {

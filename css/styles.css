@@ -251,11 +251,18 @@ ul { list-style: none; }
   width: 100%;
   min-height: 0;
 }
+.hero-home-split {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
+  align-items: center;
+}
 .hero-home .hero-copy {
-  max-width: 440px;
+  max-width: 500px;
   width: 100%;
   padding: 0;
   display: flex;
+
   flex-direction: column;
   justify-content: center;
   background: transparent;
@@ -2348,4 +2355,129 @@ body.menu-open { overflow: hidden; }
 }
 .modal-close:hover {
   color: var(--navy);
+}
+
+/* Check Your Options Form (Home Page) */
+.hero-form-container {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 32px 28px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+.check-options-form h3 {
+  font-size: 1.6rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+.check-options-form .form-intro {
+  color: var(--gray-500);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+.check-options-form .form-group {
+  margin-bottom: 16px;
+}
+.check-options-form label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.check-options-form input[type="text"],
+.check-options-form input[type="tel"],
+.check-options-form select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--navy);
+  background-color: var(--white);
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+.check-options-form input:focus,
+.check-options-form select:focus {
+  outline: none;
+  border-color: var(--green);
+}
+.check-options-form .form-consent {
+  margin: 20px 0;
+}
+.check-options-form .checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  font-weight: normal;
+}
+.check-options-form .checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.check-options-form .checkmark {
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all 0.2s;
+}
+.check-options-form .checkbox-label:hover input ~ .checkmark {
+  border-color: var(--green);
+}
+.check-options-form .checkbox-label input:checked ~ .checkmark {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+.check-options-form .checkmark svg {
+  width: 14px;
+  height: 14px;
+  color: white;
+  display: none;
+}
+.check-options-form .checkbox-label input:checked ~ .checkmark svg {
+  display: block;
+}
+.check-options-form .consent-text {
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  line-height: 1.4;
+}
+.check-options-form .btn-submit {
+  width: 100%;
+  background: var(--green);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.check-options-form .btn-submit:hover {
+  background: var(--green-dark);
+}
+.check-options-form .form-disclaimer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  margin-top: 12px;
+}
+@media (max-width: 900px) {
+  .hero-home-split {
+    grid-template-columns: 1fr;
+  }
 }
