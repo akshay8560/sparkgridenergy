@@ -2661,10 +2661,11 @@ body.menu-open { overflow: hidden; }
   height: 100%;
 }
 .battery-hero-img {
-  max-width: 250px; /* Reduced from 320px for better fit */
+  max-width: 210px; /* Reduced from 250px for smaller size */
   height: auto;
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
   margin-bottom: -40px; /* Pull it down slightly to look grounded */
+  margin-right: 40px; /* Shifts the image slightly to the left */
 }
 
 .solar-hero-content h1 {
