@@ -1109,6 +1109,52 @@ ul { list-style: none; }
   margin: 0;
 }
 
+/* Brands Grid Sprites */
+.sp-brands-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.brand-sprite-box {
+  position: relative;
+  width: 100%;
+  padding-top: 65%;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.brand-sprite-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.brand-sprite-img {
+  position: absolute;
+  width: 500%;
+  height: 262.3%;
+  max-width: none;
+}
+.brand-r1 { top: -58.5%; }
+.brand-r2 { top: -158.5%; }
+.brand-c1 { left: 0%; }
+.brand-c2 { left: -100%; }
+.brand-c3 { left: -200%; }
+.brand-c4 { left: -300%; }
+.brand-c5 { left: -400%; }
+
+@media (max-width: 900px) {
+  .sp-brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .sp-brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Key Benefits */
 .sp-benefits-section {
   padding: 80px 0;
