@@ -187,13 +187,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (delayedPopupModal) {
-    // Only show if they haven't seen it in this session (optional, but good UX)
-    if (!sessionStorage.getItem('popupShown')) {
-      setTimeout(() => {
-        delayedPopupModal.classList.add('active');
-        sessionStorage.setItem('popupShown', 'true');
-      }, 10000); // 10 seconds
-    }
+    setTimeout(() => {
+      delayedPopupModal.classList.add('active');
+    }, 10000); // 10 seconds
   }
 
   // Close function for delayed popup
