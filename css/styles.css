@@ -2657,29 +2657,14 @@ body.menu-open { overflow: hidden; }
 .solar-hero-battery-display {
   display: flex;
   justify-content: center;
-  align-self: end;
+  align-self: end; /* Only align the battery to the bottom */
   height: 100%;
-  position: relative;
 }
-
-.solar-hero-battery-display::before {
-  content: "";
-  position: absolute;
-  bottom: 25px; /* Sits just above the feet */
-  width: 130px; /* Matches the battery body width */
-  height: 360px; /* Matches the battery body height */
-  background: white;
-  z-index: 0;
-  border-radius: 6px;
-}
-
 .battery-hero-img {
-  position: relative;
-  z-index: 1;
-  max-width: 240px; /* Reduced size */
+  max-width: 250px; /* Reduced from 320px for better fit */
   height: auto;
-  mix-blend-mode: multiply; /* Makes white background transparent */
-  margin-bottom: 0; 
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+  margin-bottom: -40px; /* Pull it down slightly to look grounded */
 }
 
 .solar-hero-content h1 {
