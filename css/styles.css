@@ -2625,3 +2625,174 @@ body.menu-open { overflow: hidden; }
     font-size: 1.5rem;
   }
 }
+
+/* Solar Hero New */
+.solar-hero-new {
+  position: relative;
+  padding: 120px 0 80px;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  margin-top: -80px; /* Offset for transparent header if needed */
+}
+.solar-hero-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('../images/hero-home.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+.solar-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+.solar-hero-content h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+.solar-hero-content .highlight-green {
+  color: #6a9c51;
+}
+.solar-hero-subtext {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+.solar-hero-brand {
+  margin-bottom: 40px;
+}
+.solar-hero-brand .brand-logo {
+  max-width: 200px;
+}
+.solar-hero-pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.solar-hero-pricing .pricing-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.solar-hero-pricing .pricing-badge {
+  background: #6a9c51;
+  color: white;
+  font-size: 3rem;
+  font-weight: 800;
+  padding: 4px 24px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+.solar-hero-pricing .pricing-terms {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Form Styles */
+.solar-hero-form-wrapper {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  color: #333;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.solar-hero-form-card h2 {
+  text-align: center;
+  color: var(--navy);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.solar-hero-form-card .form-subtitle {
+  text-align: center;
+  color: #6a9c51;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+.solar-hero-form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.solar-hero-form-card .form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.solar-hero-form-card input,
+.solar-hero-form-card select,
+.solar-hero-form-card textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+.solar-hero-form-card .secure-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  margin-top: 8px;
+}
+.solar-hero-form-card .secure-badge svg {
+  width: 16px;
+  height: 16px;
+}
+.solar-hero-form-card .btn-submit-hero {
+  background: #10a360;
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+.solar-hero-form-card .btn-submit-hero:hover {
+  background: #0d8a51;
+}
+.solar-hero-form-card .form-footer-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  margin-top: 4px;
+}
+
+@media (max-width: 992px) {
+  .solar-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .solar-hero-content h1 {
+    font-size: 3rem;
+  }
+  .solar-hero-form-wrapper {
+    padding: 24px;
+  }
+}
+@media (max-width: 576px) {
+  .solar-hero-form-card .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+  .solar-hero-content h1 {
+    font-size: 2.5rem;
+  }
+}

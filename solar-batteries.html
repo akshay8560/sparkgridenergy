@@ -27,135 +27,63 @@
     </div>
   </header>
 
-  <!-- Hero Split -->
-  <section class="sp-hero">
-    <div class="container sp-hero-grid">
-      <div class="sp-hero-content">
-        <h1>Unlock Government Savings with <span class="sp-highlight">Battery Storage Rebates</span></h1>
-        <p>Store more of your energy and reduce power bills with a smart battery system—rebates applied upfront.</p>
+  <!-- Solar New Hero -->
+  <section class="solar-hero-new">
+    <div class="solar-hero-bg"></div>
+    <div class="container solar-hero-grid">
+      
+      <!-- Left Content -->
+      <div class="solar-hero-content">
+        <h1>Power Your Home.<br><span class="highlight-green">Save More. Every Day.</span></h1>
+        <p class="solar-hero-subtext">Store excess solar, reduce your energy bills and take control of your power with <strong>FoxESS Battery solutions.</strong></p>
         
-        <div class="sp-hero-badges">
-          <img src="images/google-logo.webp" alt="Google 5 Stars">
-          <img src="images/approved-seller.webp" alt="New Energy Tech Approved Seller">
+        <div class="solar-hero-brand">
+          <img src="images/fox-ess-logo.webp" alt="Fox ESS Batteries" class="brand-logo">
+        </div>
+        
+        <div class="solar-hero-pricing">
+          <span class="pricing-label">STARTING FROM</span>
+          <div class="pricing-badge">$5,499*</div>
+          <span class="pricing-terms">*T&C Apply</span>
         </div>
       </div>
       
-      <div class="sp-hero-form-card">
-        <form id="sp-multistep-form" action="contact.html" method="GET">
+      <!-- Right Form -->
+      <div class="solar-hero-form-wrapper">
+        <div class="solar-hero-form-card">
+          <h2>Get Your Free Quote</h2>
+          <p class="form-subtitle">It only takes 30 seconds</p>
           
-          <input type="hidden" name="sheetTabName" value="Solar LP Data">
-
-          <!-- STEP 1 -->
-          <div id="sp-step-1" class="sp-form-step">
-            <div class="sp-step-indicator">
-              <div class="sp-step-dot active">1</div>
-              <div class="sp-step-dot">2</div>
-              <div class="sp-step-dot">3</div>
+          <form id="solar-lp-form" action="contact.html" method="GET">
+            <input type="hidden" name="sheetTabName" value="Solar LP Data">
+            
+            <div class="form-row-2">
+              <input type="text" name="fullName" placeholder="Full Name" required>
+              <input type="tel" name="phone" placeholder="Phone Number" required>
             </div>
             
-            <h3>Check Your Eligibility</h3>
-            <p>Do you currently have Solar Panel?</p>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="postcode" placeholder="Postcode" required>
             
-            <div class="sp-radio-group">
-              <label class="sp-radio-label">
-                <input type="radio" name="has_solar" value="yes" required>
-                Yes, I have Solar Panel
-              </label>
-              <label class="sp-radio-label">
-                <input type="radio" name="has_solar" value="no" required>
-                No, I don't have Solar Panel
-              </label>
-            </div>
-          </div>
-
-          <!-- STEP 2 -->
-          <div id="sp-step-2" class="sp-form-step" style="display: none;">
-            <div class="sp-step-indicator">
-              <div class="sp-step-dot active">1</div>
-              <div class="sp-step-dot active">2</div>
-              <div class="sp-step-dot">3</div>
+            <select name="property_owner" required>
+              <option value="" disabled selected>Are you the owner of the property?</option>
+              <option value="Yes">Yes, I am the owner</option>
+              <option value="No">No, I am renting</option>
+            </select>
+            
+            <textarea name="energy_needs" placeholder="Tell us about your energy needs" rows="3"></textarea>
+            
+            <div class="secure-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span>Your information is safe and secure.</span>
             </div>
             
-            <h3>Tell Us About Your Upgrade</h3>
-            <p>A few details about what you're after and the property.</p>
-            
-            <div class="sp-form-group">
-              <label class="sp-form-label">Product <span>*</span></label>
-              <select name="product" required>
-                <option value="Solar Battery" selected>Solar Battery</option>
-                <option value="Solar Panels">Solar Panels</option>
-                <option value="Heat Pump">Heat Pump Hot Water</option>
-              </select>
-            </div>
-            <div class="sp-form-group">
-              <label class="sp-form-label">Preferred Brand <span>*</span></label>
-              <select name="brand" required>
-                <option value="" disabled selected>Select...</option>
-                <option value="Hiconics">Hiconics</option>
-                <option value="Sofar">Sofar</option>
-                <option value="Fox ESS">Fox ESS</option>
-                <option value="Open">Open to Recommendations</option>
-              </select>
-            </div>
-            <div class="sp-form-group">
-              <label class="sp-form-label">Full Street Address of Property</label>
-              <input type="text" name="address" placeholder="Unit 2, 9 Motto Court">
-            </div>
-            <div class="sp-form-grid">
-              <div class="sp-form-group">
-                <label class="sp-form-label">Suburb <span>*</span></label>
-                <input type="text" name="suburb" placeholder="Hoppers Crossing" required>
-              </div>
-              <div class="sp-form-group">
-                <label class="sp-form-label">Postcode <span>*</span></label>
-                <input type="text" name="postcode" placeholder="3029" required>
-              </div>
-            </div>
-            
-            <div class="sp-form-actions">
-              <button type="button" class="sp-btn-back" data-target="1">← Back</button>
-              <button type="button" class="sp-btn-continue" data-target="3">Continue →</button>
-            </div>
-          </div>
-
-          <!-- STEP 3 -->
-          <div id="sp-step-3" class="sp-form-step" style="display: none;">
-            <div class="sp-step-indicator">
-              <div class="sp-step-dot active">1</div>
-              <div class="sp-step-dot active">2</div>
-              <div class="sp-step-dot active">3</div>
-            </div>
-            
-            <h3>Just a Few More Details</h3>
-            <p>Please provide your contact info so we can send your quote.</p>
-            
-            <div class="sp-form-grid">
-              <div class="sp-form-group">
-                <label class="sp-form-label">First Name <span>*</span></label>
-                <input type="text" name="first_name" required>
-              </div>
-              <div class="sp-form-group">
-                <label class="sp-form-label">Last Name <span>*</span></label>
-                <input type="text" name="last_name" required>
-              </div>
-            </div>
-            <div class="sp-form-group">
-              <label class="sp-form-label">Email Address <span>*</span></label>
-              <input type="email" name="email" required>
-            </div>
-            <div class="sp-form-group">
-              <label class="sp-form-label">Phone Number <span>*</span></label>
-              <input type="tel" name="phone" required>
-            </div>
-            
-            <div class="sp-form-actions">
-              <button type="button" class="sp-btn-back" data-target="2">← Back</button>
-              <button type="submit" class="sp-btn-continue">Submit →</button>
-            </div>
-          </div>
-          
-        </form>
+            <button type="submit" class="btn-submit-hero">Get My Free Quote</button>
+            <p class="form-footer-note">No obligation. No pressure.</p>
+          </form>
+        </div>
       </div>
+      
     </div>
   </section>
 

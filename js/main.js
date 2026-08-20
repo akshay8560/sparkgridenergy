@@ -179,6 +179,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (popupLeadForm) {
     popupLeadForm.addEventListener('submit', (e) => handleGenericFormSubmit(e, popupLeadForm));
   }
+  
+  // Attach to new Solar LP form
+  const solarLpForm = document.getElementById('solar-lp-form');
+  if (solarLpForm) {
+    solarLpForm.addEventListener('submit', (e) => handleGenericFormSubmit(e, solarLpForm));
+  }
+
   if (delayedPopupModal) {
     // Only show if they haven't seen it in this session (optional, but good UX)
     if (!sessionStorage.getItem('popupShown')) {
