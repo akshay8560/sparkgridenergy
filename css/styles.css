@@ -2667,7 +2667,7 @@ body.menu-open { overflow: hidden; }
   object-fit: contain; /* Prevents any distortion */
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
   margin-bottom: -40px; /* Pull it down slightly to look grounded */
-  margin-right: 120px; /* Shift it significantly further to the left */
+  margin-right: 60px; /* Shift it further to the left */
   transition: transform 1.2s ease-in-out;
   cursor: pointer;
 }
