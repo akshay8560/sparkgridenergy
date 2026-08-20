@@ -2518,7 +2518,7 @@ body.menu-open { overflow: hidden; }
   height: 100%;
   object-fit: cover;
   border-radius: 4px;
-  aspect-ratio: 4/3;
+  aspect-ratio: 1 / 1;
 }
 .rp-img-span-2 {
   grid-row: span 2;
