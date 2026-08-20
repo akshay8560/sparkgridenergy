@@ -2666,8 +2666,7 @@ body.menu-open { overflow: hidden; }
   max-width: 100%;
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
   margin-bottom: -40px; 
-  margin-right: 40px; /* Shift it slightly left */
-  transform: translateY(180px); /* Push it further down to truly touch the ground */
+  transform: translateY(120px); /* Visually push it down to the ground */
 }
 
 .solar-hero-content h1 {
