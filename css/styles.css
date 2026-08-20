@@ -2655,12 +2655,16 @@ body.menu-open { overflow: hidden; }
 .solar-hero-battery-display {
   display: flex;
   justify-content: center;
-  align-self: end; /* Only align the battery to the bottom */
+  align-items: flex-end; /* Fixes stretching: align to bottom instead of stretch */
+  align-self: end;
   height: 100%;
 }
 .battery-hero-img {
-  max-width: 215px; /* Reduced from 250px to reduce height and size */
+  max-width: 215px; /* Keeps the size reasonable */
+  max-height: 380px; /* Forces it to remain a short height */
+  width: auto;
   height: auto;
+  object-fit: contain; /* Prevents any distortion */
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
   margin-bottom: -40px; /* Pull it down slightly to look grounded */
   margin-right: 25px; /* Shift it slightly to the left */
