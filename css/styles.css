@@ -2504,9 +2504,9 @@ body.menu-open { overflow: hidden; }
 }
 .rp-grid-container {
   display: grid;
-  grid-template-columns: 1fr 450px;
-  gap: 48px;
-  align-items: flex-start;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 .rp-images {
   display: grid;
