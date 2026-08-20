@@ -2666,12 +2666,9 @@ body.menu-open { overflow: hidden; }
   max-width: 100%;
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
   margin-bottom: -40px; 
-  transform: translateY(120px) perspective(1000px) rotateY(0deg); /* Visually push it down to the ground */
-  transition: transform 1.2s ease-in-out;
+  transform: translateY(120px) perspective(1000px) rotateX(0deg) rotateY(0deg); /* Visually push it down to the ground */
+  transition: transform 0.1s ease-out; /* Fast transition for smooth JS tracking */
   cursor: pointer;
-}
-.battery-hero-img:hover {
-  transform: translateY(120px) perspective(1000px) rotateY(360deg);
 }
 
 .solar-hero-content h1 {
